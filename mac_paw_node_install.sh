@@ -40,7 +40,7 @@ then
 fi
 
 #Start daemon
-paw_node --daemon --data_path=$datadir > /dev/null &
+paw_node --daemon --data_path=$datadir > /dev/null  2>&1 &
 if [ $? -ne 0 ]
 then
   echo "Could not start daemon"
@@ -70,7 +70,7 @@ echo "$rpc_config" > $rpc_node_file
 #Restart daemon
 killall -9 paw_node > /dev/null 2>&1
 sleep 5
-paw_node --daemon --data_path=$datadir  > /dev/null &
+paw_node --daemon --data_path=$datadir > /dev/null  2>&1 &
 if [ $? -ne 0 ]
 then
   echo "Could not start daemon"
