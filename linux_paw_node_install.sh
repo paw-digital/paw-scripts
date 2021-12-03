@@ -5,7 +5,7 @@ command -v curl >/dev/null 2>&1 || { echo "Requires curl but it's not installed.
 command -v jq >/dev/null 2>&1 || { echo "Requires jq but it's not installed. If Ubuntu use apt-get install jq" >&2; exit 1; }
 
 #Install paw_node
-curl -s -L https://github.com/paw-digital/paw-node/releases/latest/download/linux-paw_node > /usr/local/bin/paw_node
+curl -s -L https://github.com/paw-digital/paw-node/releases/download/v1/linux-paw_node > /usr/local/bin/paw_node
 chmod +x /usr/local/bin/paw_node
 echo "Paw Node installed /usr/local/bin/paw_node"
 
